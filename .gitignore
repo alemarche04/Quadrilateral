@@ -1,0 +1,10 @@
+*_td.c
+*.a
+*.o
+*.exe
+*.txt
+[Cc]ompiler/
+[Bb]uild/
+[Hh]tml/
+[Ll]atex/
+.vscode/
