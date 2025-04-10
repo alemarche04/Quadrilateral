@@ -57,6 +57,17 @@ void Quadrilateral::SetAngles(float a0, float a1, float a2, float a3) {
 	
 	return;
 
+}
+
+/// @brief sets the value of the coordinates of the object on the grid
+/// @param Coord coordinates
+void Quadrilateral::SetGridCoord(coord_type Coord) {
+	
+	gridCoord.x = Coord.x;
+	gridCoord.y = Coord.y;
+	
+	return;
+
 } 
 
 /// @brief overload of operator = 
