@@ -7,24 +7,15 @@ using namespace std;
 
 int main()
 {
-    //faccio putatore di tipo quadrilatero
-    //lo faccio puntare a oggetti di tipo rettangolo
-    //chiamo getarea e dump
+    Quadrilateral* A;
+    Rectangle Re1(2,3);
+    Rhombus Rh1 (1,2);
 
-    Quadrilateral* p;
-    p = new Rectangle(2,3);
-    cout << endl << "area of p: " << p->GetArea()<< endl << flush;
-    p->Dump();
-    delete p;
+    A = &Re1;
+    A->Dump();
 
-    Rectangle R(2,3);
-    cout << endl << "area of R: " << R.GetArea() << endl << flush
-    R.Dump();
-;
-    p = new Rhombus(2,4);
-    cout << endl << "area of p: " << p->GetArea()<< endl << flush;
-    p->Dump();
-    delete p;
+    A = &Rh1;
+    A->Dump();
 
     return 0;
 
