@@ -8,11 +8,8 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include<iostream>
-
 #include "CQuadrilateral.h"
 
-using namespace std;
 
 /// @class Rectangle
 /// @brief to manage an object with the shape of a rectangle

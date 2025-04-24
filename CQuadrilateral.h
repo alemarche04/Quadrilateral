@@ -8,8 +8,7 @@
 #ifndef QUADRILATERAL_H
 #define QUADRILATERAL_H
 
-#include<iostream>
-
+#include <iostream>
 using namespace std;
 
 /// @struct coord_type
@@ -41,14 +40,15 @@ public:
 	/// @{
 	Quadrilateral();
 	Quadrilateral(const Quadrilateral &o);
-	~Quadrilateral();
+	virtual ~Quadrilateral();
 	/// @}
 	
-	/// @name OPERATORS
-	/// @{
+	/*
 	Quadrilateral& operator=(const Quadrilateral &o); 
 	bool operator==(const Quadrilateral &o);
-	/// @}
+	-> non posso istanziare oggetti di tipo Quadrilatero (contiene una funzione virtuale pura)
+	-> quindi non mi servono gli operatori
+	*/
 	
 	/// @name BASIC HANDLING
 	/// @{
@@ -64,6 +64,11 @@ public:
 	void GetSides(float &s0, float &s1, float &s2, float &s3);
 	void GetAngles(float &a0, float &a1, float &a2, float &a3);
 	void GetGridCoord(coord_type &Coord);
+
+	virtual float GetArea() = 0; // funzione virtuale pura
+	// questa classe contiene una funzione che non ha implementazione nella classe stessa
+	// tutte le classe derivate devono fornire un'implementazione di GetArea()
+	// la classe base e' diventata una classe base astratta -> non posso istanziare oggetti di questa classe
 	/// @}
 	
 	/// @name DEBUG and SERIALIZATION 

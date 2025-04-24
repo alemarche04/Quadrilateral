@@ -4,8 +4,9 @@
 ///	Details.
 ///
 
-#include<iostream>
+
 #include "CRectangle.h"
+
 
 /// @brief default constructor 
 Rectangle::Rectangle() {

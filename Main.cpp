@@ -1,34 +1,30 @@
 #include <iostream>
 #include "CQuadrilateral.h"
 #include "CRectangle.h"
+#include "CRhombus.h"
 
 using namespace std;
 
 int main()
 {
-    float area;
-    float a0, a1, a2, a3;
+    //faccio putatore di tipo quadrilatero
+    //lo faccio puntare a oggetti di tipo rettangolo
+    //chiamo getarea e dump
 
-    Quadrilateral* A; // non viene chiamato nessun costruttore
-    Rectangle r1;
-    Rectangle r2(1, 7);
+    Quadrilateral* p;
+    p = new Rectangle(2,3);
+    cout << endl << "area of p: " << p->GetArea()<< endl << flush;
+    p->Dump();
+    delete p;
 
-    A = &r1; // il puntatore della classe madre puo' puntare a un oggetto della classe figlia
-
-    A -> Dump(); //Dump del quadrilatero
-    r1.Dump(); //Dump del rettangolo
-
-    area = r1.GetArea();
-    cout << "Area of r1: " << area << endl;
-
-    r1 = r2;
-
-    area = r1.GetArea();
-    cout << "Area of r1: " << area << endl;
-
-    A -> Dump();
-    // A -> SetWidth(11, 4); // non si puo' usare il puntatore della classe madre per accedere ai metodi della classe figlia
-    r1.GetAngles(a0, a1, a2, a3);
+    Rectangle R(2,3);
+    cout << endl << "area of R: " << R.GetArea() << endl << flush
+    R.Dump();
+;
+    p = new Rhombus(2,4);
+    cout << endl << "area of p: " << p->GetArea()<< endl << flush;
+    p->Dump();
+    delete p;
 
     return 0;
 

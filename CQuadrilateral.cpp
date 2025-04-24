@@ -1,3 +1,9 @@
+/// \file CQuadrilateral.cpp
+///	\brief class Quadrilateral: implementation of the functions
+///
+///	Details.
+///
+
 #include "CQuadrilateral.h"
 
 /// @brief default constructor 
@@ -75,25 +81,17 @@ void Quadrilateral::SetGridCoord(coord_type Coord) {
 	gridCoord.y = Coord.y;
 }
 
-/// @brief overload of operator = 
-/// @param o reference to the object on the right side of the operator 
-/// @return reference to the object on the left side of the operator 
+/*
 Quadrilateral& Quadrilateral::operator=(const Quadrilateral &o) { 
-
 	cout << "Quadrilateral - operator =" << endl;
 	Init(o);
 	return *this;
-	
 }
 
-/// @brief overload of operator == 
-/// @param o reference to the object on the right side of the operator 
-/// @return always false 
 bool Quadrilateral::operator==(const Quadrilateral &o) {
-
 	return false;
 }
-
+*/
 
 /// @brief default initialization of the object
 void Quadrilateral::Init() {
